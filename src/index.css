@@ -35,13 +35,13 @@
 }
 @keyframes shadowWave {
   0% {
-    text-shadow: 2px 2px 5px rgb(248, 96, 1);
+    text-shadow: 2px 2px 5px rgb(248, 1, 1);
   }
   50% {
     text-shadow: 2px 2px 5px white;
   }
   100% {
-    text-shadow: 2px 2px 5px rgb(248, 96, 1);
+    text-shadow: 2px 2px 5px rgb(248, 1, 1);
   }
 }
 

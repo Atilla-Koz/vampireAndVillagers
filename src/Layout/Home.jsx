@@ -17,7 +17,7 @@ export default function Home() {
             <h3 className="text-black/50">How to play</h3>
           </button>
         </Link>
-        <h2 className="text-white/75 text-center ">
+        <h2 className="text-white/75 text-center wave-text">
           Enjoyable games, with love from Atilla Koz...{' '}
         </h2>
       </div>
