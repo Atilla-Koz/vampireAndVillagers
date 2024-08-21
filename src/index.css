@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply lg:text-[80px] text-[40px] font-[800];
+  }
+  h2 {
+    @apply text-[40px] font-[700];
+  }
+  h3 {
+    @apply text-[24px] font-[700];
+  }
+  h4 {
+    @apply text-[20px] font-[500];
+  }
+  h5 {
+    @apply text-[16px] font-[700];
+  }
+  h6 {
+    @apply text-[14px] font-[600];
+  }
+  a {
+    @apply text-[14px] font-[700];
+  }
+  button {
+    @apply lg:w-[221px] h-[62px] rounded-[5px];
+  }
+  p {
+    @apply text-[14px] font-[400];
+  }
+}
+@keyframes shadowWave {
+  0% {
+    text-shadow: 2px 2px 5px rgb(248, 96, 1);
+  }
+  50% {
+    text-shadow: 2px 2px 5px white;
+  }
+  100% {
+    text-shadow: 2px 2px 5px rgb(248, 96, 1);
+  }
+}
+
+.wave-text {
+  animation: shadowWave 3s infinite ease-in-out;
+}
+
+.wave-text span {
+  display: inline-block;
+  animation: wave 1.5s infinite ease-in-out;
+}
+
+.wave-text span:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.wave-text span:nth-child(even) {
+  animation-delay: 0.4s;
+}
