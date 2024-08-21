@@ -57,43 +57,41 @@ export default function Role() {
   };
 
   return (
-    <section className="h-screen bg-custom-bg bg-cover bg-center font-uncial flex flex-col items-center justify-center">
-      <div className="bg-white bg-opacity-70 p-8 rounded-lg shadow-lg w-4/5 max-w-4xl">
-        <h1 className="text-3xl font-bold mb-8 text-center">
+    <section className="min-h-screen bg-custom-bg bg-cover bg-center font-uncial flex flex-col items-center justify-center p-4">
+      <div className="bg-white bg-opacity-70 p-8 rounded-lg shadow-lg w-full max-w-4xl">
+        <h1 className="text-2xl md:text-3xl font-bold mb-8 text-center">
           Enter Players and Roles
         </h1>
 
-        <div className="flex justify-center mb-8">
-          <div className="flex items-center">
-            <select
-              className="mr-4 p-3 border border-gray-300 rounded-lg"
-              value={inputType}
-              onChange={(e) => setInputType(e.target.value)}
-            >
-              <option value="player">Player</option>
-              <option value="role">Role</option>
-            </select>
+        <div className="flex flex-col md:flex-row justify-center items-center mb-8 space-y-4 md:space-y-0 md:space-x-4">
+          <select
+            className="p-3 border border-gray-300 rounded-lg w-full md:w-auto"
+            value={inputType}
+            onChange={(e) => setInputType(e.target.value)}
+          >
+            <option value="player">Player</option>
+            <option value="role">Role</option>
+          </select>
 
-            <input
-              className="p-3 border border-gray-300 rounded-lg w-64"
-              type="text"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              placeholder={`Enter new ${inputType}`}
-            />
+          <input
+            className="p-3 border border-gray-300 rounded-lg w-full md:w-64"
+            type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder={`Enter new ${inputType}`}
+          />
 
-            <button
-              className="ml-4 p-3 bg-black/50 text-white rounded-lg hover:bg-white/50"
-              onClick={handleAdd}
-            >
-              Add
-            </button>
-          </div>
+          <button
+            className="p-3 bg-black/50 text-white rounded-lg hover:bg-white/50 w-full md:w-auto"
+            onClick={handleAdd}
+          >
+            Add
+          </button>
         </div>
 
-        <div className="flex justify-between space-x-8 mb-8">
-          <div className="w-1/2">
-            <h2 className="text-xl font-bold mb-4">Players</h2>
+        <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-8 mb-8">
+          <div className="w-full md:w-1/2">
+            <h2 className="text-lg md:text-xl font-bold mb-4">Players</h2>
             <ul className="bg-gray-100 p-4 rounded-lg shadow-inner">
               {players.map((player, index) => (
                 <li
@@ -112,8 +110,8 @@ export default function Role() {
             </ul>
           </div>
 
-          <div className="w-1/2">
-            <h2 className="text-xl font-bold mb-4">Roles</h2>
+          <div className="w-full md:w-1/2">
+            <h2 className="text-lg md:text-xl font-bold mb-4">Roles</h2>
             <ul className="bg-gray-100 p-4 rounded-lg shadow-inner">
               {roles.map((role, index) => (
                 <li
@@ -133,16 +131,16 @@ export default function Role() {
           </div>
         </div>
 
-        <div className="flex justify-center space-x-8">
+        <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
           <button
-            className="ml-4 p-3 bg-black/50 text-white rounded-lg hover:bg-white/50"
+            className="p-3 bg-black/50 text-white rounded-lg hover:bg-white/50 w-full md:w-auto"
             onClick={handleRandomAssign}
           >
             Assign
           </button>
 
           <button
-            className="ml-4 p-3 bg-black/50 text-white rounded-lg hover:bg-white/50"
+            className="p-3 bg-black/50 text-white rounded-lg hover:bg-white/50 w-full md:w-auto"
             onClick={handleRandomAssign}
           >
             Reassign
@@ -151,7 +149,7 @@ export default function Role() {
 
         {assignments.length > 0 && (
           <div className="mt-8">
-            <h2 className="text-xl font-bold mb-4">Assignments</h2>
+            <h2 className="text-lg md:text-xl font-bold mb-4">Assignments</h2>
             <ul className="bg-gray-100 p-4 rounded-lg shadow-inner">
               {assignments.map((assignment, index) => (
                 <li key={index} className="py-2">
