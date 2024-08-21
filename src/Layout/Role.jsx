@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Role() {
   const [players, setPlayers] = useState([]);
@@ -7,7 +7,6 @@ export default function Role() {
   const [inputType, setInputType] = useState('player');
   const [assignments, setAssignments] = useState([]);
 
-  // Load data from localStorage on initial render
   useEffect(() => {
     const storedPlayers = JSON.parse(localStorage.getItem('players'));
     const storedRoles = JSON.parse(localStorage.getItem('roles'));
@@ -18,7 +17,6 @@ export default function Role() {
     if (storedAssignments) setAssignments(storedAssignments);
   }, []);
 
-  // Save players, roles, and assignments to localStorage whenever they change
   useEffect(() => {
     localStorage.setItem('players', JSON.stringify(players));
     localStorage.setItem('roles', JSON.stringify(roles));
