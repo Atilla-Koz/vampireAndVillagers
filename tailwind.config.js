@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         'custom-bg': "url('/src/assets/BAck.webp')",
+        'custom-bg2': "url('/src/assets/Back2.webp')",
       },
       fontFamily: {
         uncial: ['"Uncial Antiqua"', 'serif'],

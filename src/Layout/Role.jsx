@@ -1,4 +1,8 @@
 import { useState, useEffect } from 'react';
+import arrow from '../assets/arrow.svg';
+// import play from '../assets/play.svg';
+// import elden from '../assets/elden.mp3';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function Role() {
   const [players, setPlayers] = useState([]);
@@ -57,6 +61,12 @@ export default function Role() {
   return (
     <section className="min-h-screen bg-custom-bg bg-cover bg-center font-uncial flex flex-col items-center justify-center p-4">
       <div className="bg-white bg-opacity-70 p-8 rounded-lg shadow-lg w-full max-w-4xl">
+        <div className="flex flex-row justify-between">
+          <Link to="/">
+            <img className="w-4" src={arrow} />{' '}
+          </Link>
+          {/* <img className="w-4" src={play} />{' '} */}
+        </div>
         <h1 className="text-2xl md:text-3xl font-bold mb-8 text-center">
           Enter Players and Roles
         </h1>
