@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 // Doğrudan API anahtarınızı kullanarak, çevresel değişkenlerle ilgili sorunları ekarte edelim
-const API_KEY =
-  'sk-svcacct-h1FPeGLc_mDVBSC0tpblhMHXwOzoz9UILQh7FjE3qKp5OCedT3BlbkFJrxrJMj8B275MrCx_ePaNq_qYacn6vVA_sVWIqfA14dvx0pkA'; // OpenAI API anahtarınızı buraya doğrudan yazın
+const API_KEY = import.meta.env.VITE_OPENAI_API_KEY; // OpenAI API anahtarınızı buraya doğrudan yazın
 
 const apiClient = axios.create({
   baseURL: 'https://api.openai.com/v1',
