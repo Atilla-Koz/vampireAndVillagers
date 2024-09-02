@@ -19,6 +19,11 @@ export default function Header() {
             <h4>Role</h4>
           </Link>
         </button>
+        <button>
+          <Link to="/ai">
+            <h4>AI</h4>
+          </Link>
+        </button>
       </div>
     </section>
   );
